@@ -1,0 +1,20 @@
+name: Simple CI Test
+
+on:
+ push:
+  branches: 
+   - main
+ pull_request:
+  branches:
+   - main
+
+jobs:
+ build:
+  runs-on: 
+   - ubuntu-latest
+  steps: 
+   - name: Checkout code
+     uses: actions/checkout@v3
+
+   - name: Echo test
+     run: echo "Code is successfully pushed and CI is working!"
